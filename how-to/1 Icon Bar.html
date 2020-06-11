@@ -1,0 +1,104 @@
+<!-- Step 1: Add HTML
+     Step 2) Add CSS
+     2.1 Horizontal Icon Bar
+     2.2 Vertical Icon Bar -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Step 2) Add CSS  -->
+    
+    <style>
+        
+        /* 2.1 CSS Horizontal Icon Bar */
+        .icon-bar-horizontal {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+        }
+        
+        .icon-bar-horizontal a {
+            float: left;
+            text-align: center;
+            width:20%;
+            padding: 12px 0;
+            /* Some top and bottom padding */
+            transition: all 0.3s ease;
+            /* Add transition for hover effects */
+            color: white;
+            /* White text color */
+            font-size:xx-large;
+        }
+        
+        .icon-bar-horizontal a:hover {
+            background-color: #000;
+            /* Add a hover color */
+        }
+        .active-h {
+            background-color: #6062df;
+            /* Add an active/current color */
+        }
+
+        /* 2.2  CSS Vertical Icon Bar */
+        .icon-bar-vertical {
+            width:90px;
+            background-color: #555;
+        }
+
+        .icon-bar-vertical a {
+            display: block;
+            /* displays the icons one below the other instead of in a line */
+            text-align: center;
+            padding: 30%;
+            transition: all 0.3s;
+            /*adding transition for hover effects*/
+            color: white;
+            /*text color; ie icon color will be white*/
+            font-size: xx-large;
+        }
+
+        .icon-bar-vertical a:hover {
+            background-color: #000;
+            /* giving color to thehover, can be given to icon using 'color' or to the block using background-color */
+        }
+        
+        .active-v {
+            background-color: #4CAF50;
+            /* Add an active/current color */
+        }
+        .h1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        </style>
+</head>
+
+<body>
+    <!-- Step 1: Add HTML -->
+    <div class="icon-bar-horizontal">
+        <a href="#" class="active-v"><i class="fa fa-home"></i></a>
+        <a href=""><i class="fa fa-search"></i></a>
+        <a href=""><i class="fa fa-envelope"></i></a>
+        <a href=""><i class="fa fa-globe"></i></a>
+        <a href=""><i class="fa fa-trash"></i></a>
+        
+    </div>
+    <h1> Lesson 1
+        -Rujul Walvekar
+    </h1>
+    <div class="icon-bar-vertical">
+        <a href="#" class="active-h"><i class="fa fa-home"></i></a>
+        <a href=""><i class="fa fa-search"></i></a>
+        <a href=""><i class="fa fa-envelope"></i></a>
+        <a href=""><i class="fa fa-globe"></i></a>
+        <a href=""><i class="fa fa-trash"></i></a>
+        
+    </div>
+
+</body>
+
+</html>
