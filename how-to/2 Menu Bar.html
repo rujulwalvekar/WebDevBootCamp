@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar</title>
+
+    <!-- Style -->
+    <style>
+        .normal {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+        }        
+
+        .container {
+
+            cursor: pointer;
+            margin:auto;
+            text-align: center;
+            right:50px;
+        }
+
+
+        .bar1,.bar2,.bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 6px 0;
+            transition: 0.4s;
+
+        }
+
+        /* Rotate first bar */
+        .change .bar1 {
+
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        /* Fade out the second bar */
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        /* Rotate last bar */
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Menu Bar</h1>
+    <h5>Rujul Walvekar</h5>
+    <hr class="text">
+    <!-- How To Create a Menu Icon
+If you are not using an icon library, you can create a basic menu icon with CSS:
+
+1) Ordinary Menu Icon:
+The width and the height property specifies the width and height of each bar.
+I added a black background-color, and the top and bottom margin is used to create some distance between each bar.-->
+<hr class="text">
+
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <p>Added a normal Menu Bar with No Animation</p>
+    <hr class="text">
+    <hr class="text">
+
+    <!-- 
+2) Animated Menu Icon:
+Use CSS and JavaScript to change the menu icon to a "cancel/remove" icon when it is clicked on:
+Step 1) Add HTML: -->
+
+    <div class="container" onclick="myFunction(this)">
+
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+
+    </div>
+    <p>Click on the Menu Bar to see the Animation</p>
+    <hr class="text"><hr class="text">
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+        </script>
+    <p>Studied from w3schools</p>
+</body>
+
+
+</html>
