@@ -1,0 +1,149 @@
+<!-- 4 Tabs
+Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects:
+
+Create Toggleable Tabs
+Step 1) Add HTML: -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tabs</title>
+    <!-- Step 2) Add CSS:
+    Style the buttons and the tab content: -->
+    <style>
+        .tab,
+        .tab1 {
+            overflow: hidden;
+            border: 1px solid;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .tab button {
+            background-color: rgb(240, 222, 222);
+            float: left;
+            border: 0.1px;
+            outline: 0.5px;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            margin: 1px;
+        }
+
+        .tab button:hover,
+        .tab1 button:hover {
+            background-color: rgb(248, 197, 248);
+        }
+
+        .tab button.active,
+        .tab1 button.active {
+            background-color: rgb(248, 197, 248);
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            animation: fadeEffect 1s;
+        }
+
+        /* Fade in tabs */
+        @-webkit-keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Go from zero to full opacity */
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks " onclick="openCity(event,'London')">London</button>
+        <button class="tablinks " onclick="openCity(event,'Paris')">Paris</button>
+        <button class="tablinks " onclick="openCity(event,'Tokyo')">Tokyo</button>
+        <button class="tablinks " onclick="openCity(event,'Rujul')" id="defaultOpen">Rujul Walvekar 2020</button>
+    </div>
+    <!-- <div class="tab1">
+        <button class="tablinks " onclick="openCity(event,'Rujul')">Rujul Walvekar 2020</button>
+    </div> -->
+    <!-- Tab Content -->
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus saepe numquam, maxime nam dolores molestiae
+            eius unde impedit a, totam veniam eaque placeat nihil iusto eum! Officiis harum doloribus ipsum.</p>
+    </div>
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est numquam sapiente quas harum fuga maiores
+            doloremque, vel excepturi. Inventore, ipsam amet! Reiciendis natus, tenetur provident adipisci nulla sit
+            quasi.</p>
+    </div>
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque illum tenetur reprehenderit natus mollitia
+            culpa, eos harum officiis voluptatibus ab, corporis quam! Corporis odio cumque dolor recusandae!
+            Consectetur, aut quia.</p>
+
+    </div>
+    <div id="Rujul" class="tabcontent">
+        <h3>Rujul Walvekar</h3>
+        <p>
+            Hi! I am creating this to learn web development. <br>
+            <a href="https://www.linkedin.com/in/rujulwalvekar">My LinkedIn</a><br>
+            <a href="https://github.com/rujulwalvekar">My Github</a><br>
+            <a href="https://twitter.com/rujul_w/">My Twitter</a><br>
+        </p>
+
+    </div>
+    <div>
+        <br>
+        <a href="https://www.w3schools.com/howto/howto_js_tabs.asp">Studied from w3schools</a>
+    </div>
+    <!-- Step 3 add Javascript -->
+    <script>
+        // Create buttons to open specific tab content. 
+        // All <div> elements with class="tabcontent" are hidden by default (with CSS & JS). 
+        // When the user clicks on a button - it will open the tab content that "matches" this button.
+
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
