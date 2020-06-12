@@ -1,0 +1,192 @@
+<!-- An Accordion means it is Collapsible Content-->
+<!-- Accordions are useful when you want to toggle between hiding and showing large amount of content:
+    Like Sections (Section 1, Section 2, Section 3) -->
+
+<!-- Accordions are useful when you want to toggle between hiding and showing large amount of content: -->
+
+<!-- 
+    Create An Accordion
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        3 Accordion
+    </title>
+    <link href='https://css.gg/pacman.css' rel='stylesheet'>
+    <!-- Step 2) Add CSS:
+    Style the accordion: -->
+    <style>
+        /* Style the buttons that are used to open and close the accordion panel */
+        .accordion {
+            background-color: black;
+            color: floralwhite;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border-width: 8px;
+            border-color: #0403c3;
+            font-size: 175%;
+            margin: 0, 2%;
+            transition-duration: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #0403c3;
+        }
+
+        body {
+            background: #000;
+            color: #fdfe03;
+            font-size: 135%;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: black;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            max-height: 0;
+        }
+
+        .gg-pacman {
+            display: inline-block;
+            color: #fc0105;
+        }
+
+        .accordion:after {
+            content: '\02795';
+            /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
+        }
+    </style>
+</head>
+
+<body>
+    <!--  Step 1) Add HTML: -->
+    <h1>Accordion</h1>
+    <h2>With a Pacman Theme</h2>
+    <p style="color: rgb(12, 224, 48);">
+        An Accordion means it is Collapsible Content
+        <br>
+        Accordions are useful when you want to toggle between hiding and showing large amount of content:
+        Like Sections (Section 1, Section 2, Section 3)
+
+    </p>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+
+        <!-- The div class is our panel which will be hidden/shown -->
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic obcaecati provident pariatur eius quas
+            cupiditate a enim neque necessitatibus magni quaerat, fuga laudantium. Sed nostrum vitae maiores adipisci
+            quos.</p>
+    </div>
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa suscipit atque tenetur delectus,
+            beatae, dolores non commodi minima, explicabo maiores facilis. Mollitia ex eligendi aperiam aut autem quidem
+            ab.</p>
+    </div>
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <i class="gg-pacman"></i>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fuga doloremque tempora assumenda nulla eos
+            est. Harum ipsam neque ratione, a aspernatur nihil fugit quos dolor voluptates facilis, voluptatem
+            voluptatibus.</p>
+    </div>
+    <div>
+        <p>
+            Made by Rujul Walvekar 2020
+        </p>
+    </div>
+
+    <!-- Step 3) Add JavaScript: -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        // To start listening
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
