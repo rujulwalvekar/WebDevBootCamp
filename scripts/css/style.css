@@ -11,12 +11,16 @@ h3{
 p,td{
     font-size: 20px;
 }
+a{
+    font-size: 33px;
+}
 hr {
     height: 0px;
-    border-color: rgb(1, 19, 15);
+    border-color: rgb(201, 165, 9);
     border-style: dotted none none;
     border-width: 5px;
     width: 5%;
+    
 }
 .main{
     color: white;
