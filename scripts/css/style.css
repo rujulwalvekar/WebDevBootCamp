@@ -15,6 +15,7 @@ a{
     font-size: 33px;
 }
 hr {
+    /* hr has been changed */
     height: 0px;
     border-color: rgb(201, 165, 9);
     border-style: dotted none none;
