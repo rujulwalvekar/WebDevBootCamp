@@ -14,6 +14,9 @@ p,td{
 a{
     font-size: 33px;
 }
+.backhome{
+    font-size: 100%;
+}
 hr {
     /* hr has been changed */
     height: 0px;
